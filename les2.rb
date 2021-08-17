@@ -2,15 +2,15 @@
 class Ticket
 
 	def price
-	    1000
+	   1000
 	end
 
 	def row 
-		4
+	   4
 	end
 
 	def seat
-		12
+	    12
 	end
 
 	def event
