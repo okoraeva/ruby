@@ -34,7 +34,7 @@ puts 'hello world'
 rainbow = %w[красный оранжевый жёлтый зелёный голубой синий фиолетовый]
 puts rainbow[rand(rainbow.size)]
 
-# Task 7
+# Task 8
 dot1 = {
   x: 3,
   y: 7
