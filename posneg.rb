@@ -4,7 +4,7 @@ def check
 	  "Это не число или 0"
 	elsif x[0].negative?
 		"Число отрицательное"
-  else 
+  else
     "Число положительное"
 	end
 end
