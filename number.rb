@@ -1,6 +1,6 @@
 class Even
-	def set_num(number)
-		@number = number
+	def set_num
+		@number = gets.chomp.to_i
 	end
 	def number
 		@number
@@ -14,5 +14,4 @@ class Even
 	end
 end
 ev = Even.new
-ev.set_num(28)
 ev.check
