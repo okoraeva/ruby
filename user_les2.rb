@@ -1,38 +1,20 @@
+# frozen_string_literal: true
+
 class User
   def set_name(name)
     @name = name
   end
-  def name
-    @name
-  end
-  def set_sname(sname)
-    @sname = sname
-  end
-  def sname
-    @sname
-  end
-  def set_patr(patronymic)
-    @patr = patronymic
-  end
-  def patr
-    @patr
-  end
+
+  attr_reader :name, :grade
+
   def set_grade(grade)
     @grade = grade if grade >= 1 && grade <= 5
-  end
-  def grade
-    @grade
-  end
-  def fio
-    "#{@name} + #{@sname} + #{@patr}"
   end
 end
 
 def user(name, grade)
   student = User.new
   student.set_name(name)
-  #student.set_sname(sname)
-  #student.set_patr(patr)
   student.set_grade(grade)
   [student]
 end
