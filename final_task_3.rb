@@ -1,8 +1,16 @@
-path = File.join('.')
-ent = Dir.new(path).entries.reject { |x| %w[. ..].include? x }
+def scan(path)
+  entries = Dir.new(path)
+               .entries
+               .reject { |x| %w[. ..].include? x }
+               .map { |x| File.join(path, x) }
 
-counter = 0
-ent.each do |el|
-  counter += 1 if File.extname(el) == '.rb'
+  counter = 0
+  entries.each do |item|
+    counter += scan(item) if File.directory?(item)
+    counter += 1 if File.extname(item) == '.rb'
+  end
+  counter
 end
-p counter
+
+path = File.join('/home/olya/Рабочий стол/ruby')
+p scan(path)
